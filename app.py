@@ -23,17 +23,17 @@ def main():
     # parse command line arguments    
     parser = ArgumentParser()
     parser.add_argument("-c", "--country", default="DE",
-                        help="country for the values to be received. Format: 'DE' for Germany or 'AT' for Austria")
+                        help="country for the values to be received, e.g. DE for Germany or AT for Austria")
     # when using lower case --from, the call to args.from fails with a syntax error, thus using the uppercase form "--From" as a workaround
     # ToDo: fix this!
     parser.add_argument("-F", "--From", 
-                        help="start date for the values to be received. Format: 'YYYY-MM-DD' or a negative offset (e.g. -1 = -1 day)")
+                        help="start date for the values to be received. Format: YYYY-MM-DD or a negative offset (e.g. -1 = -1 day)")
     parser.add_argument("-T", "--To", 
-                        help="end date for the values to be received. Format: 'YYYY-MM-DD' or a negative offset (e.g. -1 = -1 day)")
+                        help="end date for the values to be received. Format: YYYY-MM-DD or a negative offset (e.g. -1 = -1 day)")
     parser.add_argument("-D", "--Date", 
-                        help="exact date for the values to be received. Format: 'YYYY-MM-DD' or a negative offset (e.g. -1 = -1 day)")
+                        help="exact date for the values to be received. Format: YYYY-MM-DD or a negative offset (e.g. -1 = -1 day)")
     parser.add_argument("-s", "--size", default=300, 
-                        help="exact date for the values to be received. Format: 'YYYY-MM-DD' or a negative offset (e.g. -1 = -1 day)")
+                        help="maximum number of results/rows to be received")
     parser.add_argument("-dnw", "--do_not_write", action='store_true',
                         help="do not write values to database")
 
