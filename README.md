@@ -143,7 +143,7 @@ In the current implementation, the timestamp will always be at 0:00 local time a
 
 ## Known bugs & limitations
 
-* For some obscure reason, the command line argument parser doesn't allow using the parameter `--form`. Thus I have implemented it as an upper case parameter `--Form`.
+* For some obscure reason, the command line argument parser doesn't allow using the parameter `--from`. Thus I have implemented it as an upper case parameter `--From`.
 
 ## Additional documentation used 
 
