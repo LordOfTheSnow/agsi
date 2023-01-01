@@ -23,7 +23,7 @@ def main():
     # parse command line arguments    
     parser = ArgumentParser()
     parser.add_argument("-c", "--country", default="DE",
-                        help="country for the values to be received, e.g. DE for Germany or AT for Austria")
+                        help="country for the values to be received, e.g. DE for Germany or AT for Austria; default=DE")
     # when using lower case --from, the call to args.from fails with a syntax error, thus using the uppercase form "--From" as a workaround
     # ToDo: fix this!
     parser.add_argument("-F", "--From", 
@@ -33,7 +33,7 @@ def main():
     parser.add_argument("-D", "--Date", 
                         help="exact date for the values to be received. Format: YYYY-MM-DD or a negative offset (e.g. -1 = -1 day)")
     parser.add_argument("-s", "--size", default=300, 
-                        help="maximum number of results/rows to be received")
+                        help="maximum number of results/rows to be received; default=300")
     parser.add_argument("-dnw", "--do_not_write", action='store_true',
                         help="do not write values to database")
 
@@ -116,7 +116,7 @@ def main():
         handleData(log=app_log, df=df, args=args, influxDbClient=influxDbClient, influxBucket=influxBucket)
 
 
-# helper function because it is repeated for either InfluxDB 1.8 and 2
+# helper function 
 def handleData(log, df, args, influxDbClient, influxBucket):
     if len(df):
         if not args.do_not_write:

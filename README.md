@@ -24,7 +24,7 @@ Version 1.0 of this script has been hacked together more or less quick and dirty
 
 ## Requirements
 
-* Python 3.10 or higher (currently works under 3.9+)
+* Python 3.10 or higher (currently works under 3.9.2+)
 * additional Python modules: see requirements.txt
 * A free API key from https://agsi.gie.eu/account
 * An InfluxDB 2.x to store the values (1.8 is not supported).
