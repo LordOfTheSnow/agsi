@@ -152,5 +152,7 @@ In the current implementation, the timestamp will always be at 0:00 local time a
 
 ## History
 
+* 01-Jan-2023
+  * updated requirements due to security issues in certifi
 * 19-Aug-2022
   * first public version
